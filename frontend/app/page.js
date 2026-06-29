@@ -19,7 +19,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/employees")
+    fetch("https://omnicore-nexus.onrender.com/employees")
       .then((res) => res.json())
       .then((data) => setEmployees(data))
       .catch((err) => console.log(err));
@@ -32,7 +32,7 @@ export default function Home() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/predict-attrition",
+  "https://omnicore-nexus.onrender.com/predict-attrition",
         {
           method: "POST",
           headers: {
